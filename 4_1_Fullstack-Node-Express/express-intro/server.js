@@ -2,12 +2,14 @@
 const express = require("express");
 const path = require("path");
 const todoDB = require("./data/todo-db");
+
 //create app
 const app = express();
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+//used to check logs in console
 console.log("dirname -->", __dirname);
 console.log("path joined-->", path.join(__dirname, "views"));
 //mount routes
