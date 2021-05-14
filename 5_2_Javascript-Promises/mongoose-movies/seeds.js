@@ -18,4 +18,6 @@ const p = new Promise(function(resolve,reject){
 } );
 p.then(function(result){
   console.log(result)
+}).catch( (err)=> {
+  console.log(err)
 })
