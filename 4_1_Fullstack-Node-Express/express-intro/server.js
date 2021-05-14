@@ -16,6 +16,7 @@ console.log("path joined-->", path.join(__dirname, "views"));
 app.get("/", function(req,res){
     res.redirect("/todos")
 });
+
 app.get("/todos",function(req,res){
     res.render("todos/index",{
         todos: todoDB.getAll()
