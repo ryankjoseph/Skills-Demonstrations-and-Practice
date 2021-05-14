@@ -3,8 +3,9 @@
  const Performer = require('./models/performer');
  const data = require('./data');
  const p = new Promise(function(resolve,reject){
-   let value = 42;
-   resolve(value);
+   setTimeout(()=>{
+     resolve(55);
+   },2000)
  } );
  p.then(function(result){
    console.log(result)
