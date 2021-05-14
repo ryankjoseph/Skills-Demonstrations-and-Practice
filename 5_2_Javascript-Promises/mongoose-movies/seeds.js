@@ -81,6 +81,11 @@ const p2 = Performer.deleteMany({});
 Promise.all([p1, p2])
 .then(function(result){
   console.log(result);
-}).then(function(){
+  return Performer.create(data.performers);
+}).then(function(result){
+  console.log(result);
+  return Movie.create(data.movies);
+}).then(function(result){
+  console.log(result);
   process.exit();
 })
