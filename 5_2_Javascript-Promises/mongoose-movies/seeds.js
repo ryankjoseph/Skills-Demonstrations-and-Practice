@@ -6,5 +6,6 @@
    let value = 42;
    resolve(value);
  } );
- console.log(p);
- 
+ p.then(function(result){
+   console.log(result)
+ })
