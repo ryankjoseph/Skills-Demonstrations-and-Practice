@@ -65,14 +65,22 @@
 //   console.log(sum);
 // });
 
-Movie.deleteMany({})
-.then(function(results){
-  console.log('Deleted Movies:', results);
-  return Performer.deleteMany({});
-})
-.then(function(results){
-  console.log("Deleted Performers:", results);
-})
-.then(function(){
+// Movie.deleteMany({})
+// .then(function(results){
+//   console.log('Deleted Movies:', results);
+//   return Performer.deleteMany({});
+// })
+// .then(function(results){
+//   console.log("Deleted Performers:", results);
+// })
+// .then(function(){
+//   process.exit();
+// })
+const p1 = Movie.deleteMany({});
+const p2 = Performer.deleteMany({});
+Promise.all([p1, p2])
+.then(function(result){
+  console.log(result);
+}).then(function(){
   process.exit();
 })
