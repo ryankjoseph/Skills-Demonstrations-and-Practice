@@ -2,4 +2,9 @@
  const Movie = require('./models/movie');
  const Performer = require('./models/performer');
  const data = require('./data');
+ const p = new Promise(function(resolve,reject){
+   let value = 42;
+   resolve(value);
+ } );
+ console.log(p);
  
