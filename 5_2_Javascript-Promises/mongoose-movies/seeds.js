@@ -88,4 +88,6 @@ Promise.all([p1, p2])
 }).then(function(result){
   console.log(result);
   process.exit();
-})
+}).catch((err)=>{
+  console.log(err)
+});
